@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-dbox-sizing: border-box;
+}
+
+body {
+  background-color: rgb(30, 110, 175);
+  margin: 0;
+}
+
+.title {
+  font-size: 82px;
+  font-family: "Source Sans Pro", Helvetiva, Arial, sans-serif;
+  color: rgb(45, 28, 48);
+  text-align: center;
+  margin-top:  20px;
+}
+
+.title .b {
+  color: rgb(99, 60, 26);
+}
+
+.beaverbird {
+  max-width: 731px;
+  margin: 0 auto;
+}
+
+.beaverbird img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tagline {
+  font-size: 46px;
+  font-family: "Source Sans Pro", Helvetiva, Arial, sans-serif;
+  color: rgb(34, 28, 52);
+  text-shadow: 1px 1px rgb(84, 186, 202);
+  background-color: rgba(34, 167, 187, 0.6);
+  text-align: center;
+  margin-top:  20px;
+}
+
+.section.text {
+  margin: 80px auto 0 auto;
+  padding: 6px;
+  width: 720px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+
+  background-color: rgb(234, 234, 243);
+  border-radius: 2px;
+  box-shadow: 2px 3px rgb(56, 56, 56);
+}
+
+.section.text p {
+  font-family: "Open Sans", Arial, sans-serif;
+  margin-top: 0;
+}
+
+.section.code {
+  margin: 80px auto 0 auto;
+  padding: 6px;
+  width: 720px;
+
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  box-shadow: 2px 3px rgb(56, 56, 56);
+}
+
+.footer {
+  margin-top: 60px;
+  padding: 10px 40px;
+  height: 80px;
+  border-top: 2px solid rgb(56, 56, 56);
+  background-color: rgb(44, 129, 79);
+}
+
+.footer .items {
+  margin: 0 auto;
+  height: 60px;
+}
+
+.footer .items div {
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 18px;
+  color: rgb(214, 214, 214);
+}
+
+.footer .items div a {
+  text-decoration: none;
+  color: rgb(214, 214, 242);
+}
+
+.footer .items div a:hover {
+  text-decoration: none;
+  color: rgb(205, 176, 91);
+}
+
+@media (max-width: 720px) {
+
+.title {
+  font-size: 62px;
+}
+
+.tagline {
+  font-size: 24px;
+}
+
+}
+
+@media (max-width: 920px) {
+
+.section {
+  max-width: 90%;
+}
+
+}

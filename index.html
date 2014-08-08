@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title> BeaverBird </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro&Open+Sans' rel='stylesheet' type='text/css'>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/generic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/monokai.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="title"> <span class="b">B</span>eaver<span class="b">B</span>ird </div>
+    <div class="beaverbird"><img src="images/beaverbird.png"></div>
+    <div class="tagline">eliminating untracked behaviour on the Web</div>
+
+    <div class="section text">
+      <p>
+        BeaverBird will use various tracking techniques to aid sites in following you around on the web.<br /><br />
+        One such technique is canvas fingerprinting.
+      </p>
+    </div>
+
+    <pre class="section code">
+        <code data-language="javascript">
+var canvasFingerprint = BeaverBird.canvas();
+$.post("/fingerprints/fingerprint", canvasFingerPrint)
+        </code>
+    </pre>
+
+  <div class="section text">
+    <p>
+      Track the behaviour of a user over your sites. No cookies. No easy way of evading.
+    </p>
+  </div>
+
+    <pre class="section code">
+        <code data-language="javascript">
+$.get("/fingerprints/" + BeaverBird.canvas(), function(res) {
+  // use your awesome new tracking skills to make the user happier than ever!
+});
+        </code>
+    </pre>
+
+    <div class="section text">
+      <p>
+        Find out if users are using different hardware, or a different browser.
+      </p>
+    </div>
+
+      <pre class="section code">
+          <code data-language="javascript">
+$.get("/users/42819103/fingerprint" + BeaverBird.canvas(), function(fp) {
+  if (BeaverBird.matchCanvas(fp)) {
+    // protect the user from horrible attacks! ;)
+  }
+});
+      </code>
+    </pre>
+
+    <div class="footer">
+      <div class="items">
+        <div><a href="https://github.com/AlexanderSelzer/BeaverBird">GitHub</a></div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
