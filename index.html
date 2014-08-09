@@ -12,6 +12,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/monokai.css" />
 
+    <script src="js/lib/beaverbird.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
 
@@ -20,30 +22,66 @@
     <div class="beaverbird"><img src="images/beaverbird.png"></div>
     <div class="tagline">eliminating untracked behaviour on the Web</div>
 
+    <div class="section intro">
+      BeaverBird is a sophisticated user tracking library with the aim of making you feel unsafe on the Web.<br />
+      It currently supports two tracking techniques, and aims at soon providing every technique possible in a client-side library.<br />
+      <br />
+
+      Being freely licensed and easy to use, BeaverBird can be integrated into websites with easily,
+      while it still fits into more complex or custom tracking scenarios.<br />
+      <br />
+      BeaverBird can bring simple and effective tracking to every site.
+    </div>
+
+    <div class="heading">
+      Features
+    </div>
+
+    <div class="section bullet">
+      Canvas Fingerprinting
+    </div>
+
+    <div class="section bullet">
+      Font Detection
+    </div>
+
+    <div class="section bullet">
+      Unique User Identifiers
+    </div>
+
+    <div class="section bullet">
+      All-In-One Tracking
+    </div>
+
+    <div class="heading">
+      Examples
+    </div>
+
     <div class="section text">
       <p>
-        BeaverBird will use various tracking techniques to aid sites in following you around on the web.<br /><br />
-        One such technique is canvas fingerprinting.
+        Let <em>BeaverBird</em> gather a unique id, save it on your server, and attach state to it.
       </p>
     </div>
 
     <pre class="section code">
         <code data-language="javascript">
-var canvasFingerprint = BeaverBird.canvas();
-$.post("/fingerprints/fingerprint", canvasFingerPrint)
+var id = BeaverBird.uid()
+
+$.post("/users/user", id)
         </code>
     </pre>
 
   <div class="section text">
     <p>
-      Track the behaviour of a user over your sites. No cookies. No easy way of evading.
+      Track the behaviour of the "user". No cookies. No easy way of evading.
     </p>
   </div>
 
     <pre class="section code">
         <code data-language="javascript">
-$.get("/fingerprints/" + BeaverBird.canvas(), function(res) {
-  // use your awesome new tracking skills to make the user happier than ever!
+$.get("/users/" + BeaverBird.uid() + "/interests", function(interests) {
+  displayAds(interests)
+  // Use your awesome new tracking skills to make the users happier, by following their interests!
 });
         </code>
     </pre>
@@ -63,6 +101,50 @@ $.get("/users/42819103/fingerprint" + BeaverBird.canvas(), function(fp) {
 });
       </code>
     </pre>
+
+    <div class="heading">
+      Installing
+    </div>
+
+    <div class="section text">
+      <p>
+        Download the latest <a href="https://github.com/AlexanderSelzer/BeaverBird/releases">release</a> from GitHub and include the file
+      </p>
+    </div>
+
+    <pre class="section code">
+        <code data-language="shell">
+&lt;head&gt;
+  &lt;script src="beaverbird.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+    </code>
+    </pre>
+
+    <div class="section text">
+      <p>
+        Or use npm
+      </p>
+    </div>
+
+    <pre class="section code">
+        <code data-language="shell">
+$ npm install --save beaverbird
+    </code>
+  </pre>
+
+  <div class="section text">
+    <p>
+      Then include the file directly or use <a href="http://browserify.org/">Browserify</a>
+    </p>
+  </div>
+
+  <pre class="section code">
+      <code data-language="html">
+&lt;head&gt;
+  &lt;script src="node_modules/beaverbird.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+  </code>
+  </pre>
 
     <div class="footer">
       <div class="items">

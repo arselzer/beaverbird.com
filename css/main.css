@@ -43,6 +43,46 @@ body {
   margin-top:  20px;
 }
 
+.section.intro {
+  margin: 80px auto 0 auto;
+  padding: 12px;
+  width: 820px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4em;
+
+  background-color: rgba(192, 223, 229, 0.86);
+  border-radius: 4px;
+  border: 1px solid rgb(36, 109, 70);
+  /*box-shadow: 2px 3px rgb(56, 56, 56);*/
+}
+
+.section.bullet {
+  margin: 26px auto 0 auto;
+  padding: 8px;
+  width: 460px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  text-align: center;
+
+  background-color: rgba(192, 223, 229, 0.86);
+  border-radius: 4px;
+  /*border: 1px solid rgb(44, 144, 97);*/
+  /*box-shadow: 2px 3px rgb(56, 56, 56);*/
+}
+
+.heading {
+  margin: 80px auto 0 auto;
+  padding: 6px;
+  /*width: 720px;*/
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: rgb(33, 43, 99);
+  font-size: 44px;
+  text-align: center;
+
+  background-color: rgb(99, 173, 205);
+}
+
 .section.text {
   margin: 80px auto 0 auto;
   padding: 6px;
@@ -50,9 +90,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 
-  background-color: rgb(234, 234, 243);
+  background-color: rgb(223, 223, 243);
   border-radius: 2px;
   box-shadow: 2px 3px rgb(56, 56, 56);
+}
+
+.section.text a {
+  text-decoration: none;
 }
 
 .section.text p {
