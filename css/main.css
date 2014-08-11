@@ -98,6 +98,11 @@ body {
 
 .section.text a {
   text-decoration: none;
+  color: rgb(57, 117, 181);
+}
+
+.section.text a:hover {
+  color: rgb(29, 97, 156);
 }
 
 .section.text p {
@@ -118,11 +123,7 @@ body {
   border-radius: 2px;
   -webkit-border-radius: 2px;
   box-shadow: 2px 3px rgb(56, 56, 56);
-}
-
-.section.code code span {
-  word-wrap: normal;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .footer {

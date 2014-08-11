@@ -65,6 +65,13 @@
 
     <div class="section text">
       <p>
+        <em>Unique User IDs</em> combine different types of tracking data into one string, making storage and comparison easy while still having the
+        reliability of multiple sources of data.
+      </p>
+    </div>
+
+    <div class="section text">
+      <p>
         BeaverBird managed to extract the following information from your browser:
       </p>
     </div>
@@ -81,7 +88,7 @@ BeaverBird.data()
 
     <div class="section text">
       <p>
-        Let <em>BeaverBird</em> gather a unique id, save it on your server, and attach state to it.
+        Gather a unique id, save it on your server, attach data about the user's behaviour to it.
       </p>
     </div>
 
@@ -103,25 +110,15 @@ $.post("/users/user", id)
         <code data-language="javascript">
 $.get("/users/" + BeaverBird.uid() + "/interests", function(interests) {
   displayAds(interests)
-  // Use your awesome new tracking skills to make the users happier, by following their interests!
+  /*
+  Use your awesome new tracking skills
+  to enhance the user's experience through
+  following their interests and displaying
+  relevant information they might be
+  interested in.
+  */
 });
         </code>
-    </pre>
-
-    <div class="section text">
-      <p>
-        Find out if users are using different hardware, or a different browser.
-      </p>
-    </div>
-
-      <pre class="section code">
-          <code data-language="javascript">
-$.get("/users/42819103/fingerprint" + BeaverBird.canvas(), function(fp) {
-  if (BeaverBird.matchCanvas(fp)) {
-    // protect the user from horrible attacks! ;)
-  }
-});
-      </code>
     </pre>
 
     <div class="heading">
